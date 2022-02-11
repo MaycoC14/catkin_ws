@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find test_rb1)/config/rb1_torso_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="torso_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" args="j1_torso_controller
+					  j1_head_controller
+					  j2_head_controller"/>
+</launch>

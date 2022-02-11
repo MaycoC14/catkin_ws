@@ -1,0 +1,40 @@
+<launch>
+  <arg name="kinova_robotType" default="m1n6s300"/>
+  <arg name="kinova_robotName" default="$(arg kinova_robotType)"/>
+  <arg name="use_trajectory_controller" default="false"/>
+  <arg name="description_name" default="robot_description"/>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find test_rb1)/config/mico_control.yaml" command="load"/>
+
+  <group unless="$(arg use_trajectory_controller)">
+    <!-- load the joint by joint position controllers -->
+    <node name="$(arg kinova_robotName)_joints_controller" pkg="controller_manager" type="spawner"
+      respawn="false" output="screen"
+     args="joint_1_position_controller joint_2_position_controller
+             joint_3_position_controller joint_4_position_controller
+             joint_5_position_controller joint_6_position_controller
+             finger_2_position_controller finger_1_position_controller
+             finger_3_position_controller finger_tip_1_position_controller
+             finger_tip_2_position_controller finger_tip_3_position_controller
+             joint_state_controller"/>
+  </group>
+
+  <group if="$(arg use_trajectory_controller)">
+    <!-- Effort Joint trajectory controller-->
+    <node name="$(arg kinova_robotName)_trajectory_controller" pkg="controller_manager" type="spawner"
+      output="screen"
+      args="effort_joint_trajectory_controller
+      effort_finger_trajectory_controller
+      finger_tip_1_position_controller
+      finger_tip_2_position_controller
+      finger_tip_3_position_controller
+      joint_state_controller"/>
+  </group>
+
+  <!-- Send the mico arm to a home position when using separate-joint controllers -->
+  <node name="move_mico_home" pkg="test_rb1" type="mico_home.py"
+        respawn="false" output="screen" unless="$(arg use_trajectory_controller)">
+  </node>
+
+</launch>

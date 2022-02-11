@@ -1,0 +1,7 @@
+set(basicmodutil_pkg_SETUP_PY_SETUP_MODULE "distutils.core")
+set(basicmodutil_pkg_SETUP_PY_VERSION "0.0.0")
+set(basicmodutil_pkg_SETUP_PY_SCRIPTS "")
+set(basicmodutil_pkg_SETUP_PY_PACKAGES "basicmodutil_pkg")
+set(basicmodutil_pkg_SETUP_PY_PACKAGE_DIRS "src/basicmodutil_pkg")
+set(basicmodutil_pkg_SETUP_PY_MODULES "")
+set(basicmodutil_pkg_SETUP_PY_MODULE_DIRS "")

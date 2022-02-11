@@ -1,0 +1,243 @@
+{
+    "Basic Module": "Torso_Head_BM", 
+    "Brief Description": "This Basic Module contain functions for Marcovito Jr. Service robot to move torso and head respectively.", 
+    "Functions": [
+        {
+            "Description": "This function extends the torso to the maximum allowed in 0.33 meters.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Torso_Arriba", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Torso_Arriba"
+                }
+            ]
+        }, 
+        {
+            "Description": "This function extends the torso to the half.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Torso_Medio", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Torso_Medio"
+                }
+            ]
+        }, 
+        {
+            "Description": "This function shorten the torso to half the minimun allowed.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Torso_Abajo", 
+            "Output-params": [
+                {
+                    "Data-type": "Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Torso_Abajo"
+                }
+            ]
+        }, 
+        {
+            "Description": "Default functions for right head movement.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Head_Derecha", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Head_Derecha"
+                }
+            ]
+        }, 
+        {
+            "Description": "Funci\u00f3n predeterminada para movimiento de cabeza en el centro (Yaw).", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Head_Medio", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Head_Medio"
+                }
+            ]
+        }, 
+        {
+            "Description": "Default functions for movement of the head to the left.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Head_Izquierda", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully", 
+                    "Name": "Head_Izquierda"
+                }
+            ]
+        }, 
+        {
+            "Description": "Default functions for head movement up.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Head_Arriba", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Head_Arriba"
+                }
+            ]
+        }, 
+        {
+            "Description": "Default functions for head movement down.", 
+            "Exec-condition": "", 
+            "Input-params": [
+            ], 
+            "Name": "Head_Abajo", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Head_Abajo"
+                }
+            ]
+        }, 
+        {
+            "Description": "This function positions the torso to a desired position. It receives as an argument a standardized parameter in the range of 0-1 where 0 takes the torso down and 1 allows it to extend to its maximum height.", 
+            "Exec-condition": "", 
+            "Input-params": [
+                {
+                    "Data-type": "std_msgs/Float64", 
+                    "Description": "the value entered must be a value between 0 and 1, where 0 means completely down and 1 up.", 
+                    "Name": "param0"
+                }
+            ], 
+            "Name": "Torso_move", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Torso_move"
+                }
+            ]
+        }, 
+        {
+            "Description": "This function moves the head in Pitch and Yaw axis, the angle of rotation is expressed in radians.", 
+            "Exec-condition": "", 
+            "Input-params": [
+                {
+                    "Data-type": "std_msgs/Float64", 
+                    "Description": "This parameter allows the head to rotate in Yaw, the angle of position is expressed in radians.", 
+                    "Name": "param0"
+                }, 
+                {
+                    "Data-type": "std_msgs/Float64", 
+                    "Description": "This parameter allows the head to rotate in Pitch, the angle of position is expressed in radians.", 
+                    "Name": "param1"
+                }
+            ], 
+            "Name": "Head_move", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "Head_move"
+                }
+            ]
+        }, 
+        {
+            "Description": "Function to move the torso and head in a single instruction.", 
+            "Exec-condition": "", 
+            "Input-params": [
+                {
+                    "Data-type": "geometry_msgs/Point", 
+                    "Description": "Parameter = (normalized torso height, Yaw head movement in rad, Pitch head movement in rad)", 
+                    "Name": "pos"
+                }
+            ], 
+            "Name": "TorsoHeadPos", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "TorsoHeadPos"
+                }
+            ]
+        }, 
+        {
+            "Description": "Function to position the torso as close to the object height.", 
+            "Exec-condition": "", 
+            "Input-params": [
+                {
+                    "Data-type": "std_msgs/Float64", 
+                    "Description": "This parameter is the height in meters of the object.", 
+                    "Name": "param0"
+                }
+            ], 
+            "Name": "TorsoPosObj", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "TorsoPosObj"
+                }
+            ]
+        }, 
+        {
+            "Description": "Function that aims to prepare the torso and head to focus the table at a certain height.", 
+            "Exec-condition": "", 
+            "Input-params": [
+                {
+
+                    "Data-type": "geometry_msgs/Point", 
+                    "Description": "Parameter = (Table height in meters, Yaw head movement in rad, Pitch head movement in rad)", 
+                    "Name": "pos"
+                } 
+  
+            ], 
+            "Name": "TorsoHeadTable", 
+            "Output-params": [
+                {
+                    "Data-type": "std_msgs/Bool", 
+                    "Description": "Returns True when performing the instruction successfully.", 
+                    "Name": "TorsoHeadTable"
+                }
+            ]
+        }, 
+        {
+            "Description": "Normalize a value in meters", 
+            "Exec-condition": "", 
+            "Input-params": [
+                {
+                    "Data-type": "float", 
+                    "Description": "Normalize a value in meters", 
+                    "Name": "param0"
+                }
+            ], 
+            "Name": "Meters_to_Normal", 
+            "Output-params": [
+                {
+                    "Data-type": "float", 
+                    "Description": "Normalized value", 
+                    "Name": "up_torso"
+                }
+            ]
+        }
+    ], 
+    "Hardware Required": [
+        "Robotnik Torso", 
+        "Robotnik Head"
+    ]
+}

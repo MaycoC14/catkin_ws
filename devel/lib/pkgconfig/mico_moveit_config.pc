@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/devel
+
+Name: mico_moveit_config
+Description: Description of mico_moveit_config
+Version: 0.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/install
+
+Name: rb1_sim_bringup
+Description: Description of rb1_sim_bringup
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

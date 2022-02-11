@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/devel
+
+Name: mico_description
+Description: Description of mico_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

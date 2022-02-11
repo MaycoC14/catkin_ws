@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mayco/catkin_ws/devel_isolated/navigation/setup.sh

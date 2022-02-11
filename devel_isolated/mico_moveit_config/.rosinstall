@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mayco/catkin_ws/devel_isolated/mico_moveit_config/setup.sh

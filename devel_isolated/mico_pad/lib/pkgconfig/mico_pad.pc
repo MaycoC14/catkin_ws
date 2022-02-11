@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/devel_isolated/mico_pad
+
+Name: mico_pad
+Description: Description of mico_pad
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

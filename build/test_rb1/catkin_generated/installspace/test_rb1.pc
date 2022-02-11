@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/install
+
+Name: test_rb1
+Description: Description of test_rb1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

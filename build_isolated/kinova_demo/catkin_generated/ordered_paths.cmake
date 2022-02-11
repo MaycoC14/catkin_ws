@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/home/mayco/catkin_ws/devel_isolated/kinova_driver/lib;/opt/ros/melodic/lib")

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="module_torso_head" type="module_torso_head_node" name="TORSO_HEAD_BM" output="screen" respawn="false"/>
+	<node pkg="module_torso_head" type="bridge_node.py" name="TORSO_HEAD_BRIDGE" output="screen" respawn="false"/>
+</launch>
+

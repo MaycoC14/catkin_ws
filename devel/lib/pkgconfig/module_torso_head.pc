@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/devel
+
+Name: module_torso_head
+Description: Description of module_torso_head
+Version: 0.0.0
+Cflags: -I/home/mayco/catkin_ws/src/module_torso_head-master/include
+Libs: -L${prefix}/lib 
+Requires: basicmodutil_pkg geometry_msgs roscpp roslib rospy std_msgs

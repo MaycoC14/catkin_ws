@@ -1,0 +1,74 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a52cc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a52cc.dir/build.make CMakeFiles/cmTC_a52cc.dir/build
+make[1]: Entering directory '/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a52cc.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a52cc.dir/CheckSymbolExists.c.o   -c /home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a52cc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a52cc.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a52cc.dir/CheckSymbolExists.c.o  -o cmTC_a52cc 
+CMakeFiles/cmTC_a52cc.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a52cc.dir/build.make:97: recipe for target 'cmTC_a52cc' failed
+make[1]: *** [cmTC_a52cc] Error 1
+make[1]: Leaving directory '/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a52cc/fast' failed
+make: *** [cmTC_a52cc/fast] Error 2
+
+File /home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_42eae/fast"
+/usr/bin/make -f CMakeFiles/cmTC_42eae.dir/build.make CMakeFiles/cmTC_42eae.dir/build
+make[1]: Entering directory '/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_42eae.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_42eae.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_42eae
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42eae.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_42eae.dir/CheckFunctionExists.c.o  -o cmTC_42eae -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_42eae.dir/build.make:97: recipe for target 'cmTC_42eae' failed
+make[1]: *** [cmTC_42eae] Error 1
+make[1]: Leaving directory '/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_42eae/fast' failed
+make: *** [cmTC_42eae/fast] Error 2
+
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_85239/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85239.dir/build.make CMakeFiles/cmTC_85239.dir/build
+make[1]: Entering directory '/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_85239.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_85239.dir/CheckIncludeFile.cxx.o -c /home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: No such file or directory
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_85239.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_85239.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_85239.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/home/mayco/catkin_ws/build_isolated/navfn/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_85239/fast' failed
+make: *** [cmTC_85239/fast] Error 2
+
+

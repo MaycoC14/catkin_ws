@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/devel
+
+Name: rb1_arm_description
+Description: Description of rb1_arm_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

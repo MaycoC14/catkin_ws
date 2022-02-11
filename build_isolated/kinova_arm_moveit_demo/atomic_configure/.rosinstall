@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mayco/catkin_ws/devel_isolated/kinova_arm_moveit_demo/setup.sh

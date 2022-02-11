@@ -1,0 +1,8 @@
+prefix=/home/mayco/catkin_ws/install
+
+Name: basicmodutil_pkg
+Description: Description of basicmodutil_pkg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lbasicmodutil_pkg
+Requires: roscpp roslib rospy std_msgs rospy_message_converter

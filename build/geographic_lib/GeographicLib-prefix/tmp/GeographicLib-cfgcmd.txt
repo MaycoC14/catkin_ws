@@ -1,0 +1,1 @@
+cmd='cd;/home/mayco/catkin_ws/build/GeographicLib-prefix/src/GeographicLib;&&;cmake;-D;CMAKE_INSTALL_PREFIX=/home/mayco/catkin_ws/devel;-D;GEOGRAPHICLIB_DATA=/home/mayco/catkin_ws/devel/share/geographic_lib/data;.'
